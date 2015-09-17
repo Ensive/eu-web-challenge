@@ -1,0 +1,10 @@
+.header-wrapper
+
+  .header
+    .header__logo
+      img.header__logo-img(src='')
+    nav.header__menu
+      -var menu = [ 'Create', 'Explore', 'How it works', 'News', 'About us'];
+      for item in menu
+        a.header__menu-link(href='#')= item
+
