@@ -1,0 +1,97 @@
+.header-wrapper
+  position: relative
+  width: 100%
+  height: 67px
+  background-color: #202020
+
+.header
+  height: 100%
+
+  &__logo
+    display: block
+    float: left
+    //margin: 22px 93px 17px 0
+    margin: 22px 93px 0 0
+    text-decoration: none
+
+  &__menu
+    display: block
+    float: left
+
+    &-link
+      display: block
+      float: left
+      margin: 0 70px 0 0
+      //font-family: $helvetica-neue
+      //font-weight: 400
+      font-size: 1.4em
+      font-size: 1.4rem
+      text-transform: uppercase
+      text-decoration: none
+      line-height: 67px
+      color: #fff
+      transition: color .2s linear
+      &:hover
+        color: #f36523
+
+  // @todo: refactor
+  &__search
+    display: block
+    float: left
+    width: 44px
+    height: 67px
+    //padding: 26px 18px 0 15px
+    padding: 26px 0 0 0
+    text-align: center
+    border-right: 1px solid #333333
+    border-left: 1px solid #333333
+    //&:hover
+    //  cursor: pointer
+    &::before
+      content: '\e800'
+      font-family: 'font-awesome'
+      width: 13px
+      height: 15px
+      font-size: 14px
+      font-weight: 400
+      color: #fff
+
+  &__search-input-wrapper
+    position: absolute
+    top: 100%
+    left: 0
+    width: 100%
+    padding: 13px 0 0 0
+    height: 58px
+    text-align: left
+    background-color: #2a2a2a
+
+  &__search-input-box
+    width: 691px
+    height: 32px
+    //padding: 9px 0 9px 21px
+    padding: 5px 21px
+    margin: 0 auto
+    background-color: #fff
+    border-radius: 3px
+    overflow: hidden
+
+  &__search-submit
+
+  &__search-input
+    width: 100%
+    height: 100%
+    margin: 0 0 0 23px
+    border: 1px solid red
+
+  &__login-button
+    //font-family: HelveticaNeue
+    //font-weight: 400
+    margin: 0 25px 0 25px
+    font-size: 1.4em
+    font-size: 1.4rem
+    line-height: 67px
+    color: #fff
+    text-decoration: none
+
+

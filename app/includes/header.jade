@@ -1,8 +1,8 @@
 .header-wrapper
 
   .header.container
-    .header__logo(role='banner')
-      img.header__logo-img(src='images/logo.jpg' alt='Logo image')
+    a.header__logo(href='#home' role='banner')
+      img.header__logo-img(src='images/logo.png' alt='Logo image' title='Home')
 
     //- navigation
     nav.header__menu
@@ -17,6 +17,7 @@
       //- search-wrapper
       .header__search-input-wrapper
         form.header__search-input-box(action='#' method='get')
+          button.header__search-submit(type='submit')
           input.header__search-input(type='search' placeholder='')
 
     //- buttons
