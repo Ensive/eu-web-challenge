@@ -1,0 +1,21 @@
+.news-wrapper
+
+  .news.container
+    section
+      header
+        h2.news__title.section-title Recent News
+        a.news__button-all.section-button-all(href='#' role='button') See All
+
+      -var news = [{title: 'Immigrants More Likely to Be Entrepreneurs', author: 'Jesus Salas', date: 'Jan. 29, 2015'}, {title: 'Transforming Personal Health: The Nokia Sensing XChallenge', author: 'Jesus Salas', date: 'Jan. 29, 2015'}, {title: 'Getting More From Results: The Clinical Trial Innovation Prize', author: 'Jesus Salas', date: 'Jan. 29, 2015'}]
+      each newsItem, index in news
+        .news__item
+          -var imgPath = 'images/news/' + newsItem.title.replace(/:/gim, '').replace(/ /gim, '-').toLowerCase() + '.jpg'
+          -var imgAlt = 'Picture of post - ' + newsItem.title
+          -var postedBy = 'Posted by ' + newsItem.author + ' on '
+          article
+            header.news__header
+              img.news__header-img(src=imgPath alt=imgAlt)
+              h3.news__header-title= newsItem.title
+            footer.news__footer
+              p.news__footer-text= postedBy
+                time(datetime='2015-01-29')= newsItem.date

@@ -1,10 +1,24 @@
 .header-wrapper
 
-  .header
-    .header__logo
-      img.header__logo-img(src='')
+  .header.container
+    .header__logo(role='banner')
+      img.header__logo-img(src='images/logo.jpg' alt='Logo image')
+
+    //- navigation
     nav.header__menu
-      -var menu = [ 'Create', 'Explore', 'How it works', 'News', 'About us'];
+      h2.hidden Menu
+      -var menu = ['Create', 'Explore', 'How it works', 'News', 'About us'];
       for item in menu
         a.header__menu-link(href='#')= item
 
+    .header__search
+      .header__search-trigger
+
+      //- search-wrapper
+      .header__search-input-wrapper
+        form.header__search-input-box(action='#' method='get')
+          input.header__search-input(type='search' placeholder='')
+
+    //- buttons
+    a.header__login-button(href='#' role='button') Sign in
+    a.header__register-button(href='#' role='button') Join Us

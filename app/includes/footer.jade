@@ -1,0 +1,20 @@
+.footer-wrapper
+
+  footer.footer.container
+    section
+      h3.hidden Information section
+      -var menus = [{title: 'About', items: ['About Us', 'Privacy Policy', 'Terms of Use', 'News', 'Events']}, {title: 'Get Involved', items: ['Work with Us', 'Subscribe for Newsletter', 'Forum']}, {title: 'Help Center', items: ['FAQs', 'Contact Us', 'How to Start a Challenge']}]
+      for menu in menus
+        nav.footer__block
+          h4.footer__block-title= menu.title
+          ul.footer__menu
+            for menuItem in menu.items
+              li.footer__menu-item
+                a.footer__menu-link(href='#')= menuItem
+
+      .footer__block
+        h4.footer__block-title Connect with Us
+        .socials
+          -var socials = ['Twitter', 'Facebook', 'Google']
+          for social in socials
+            a(class='footer__social-link footer__social-link--' + social.toLowerCase() href='#')

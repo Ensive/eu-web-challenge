@@ -1,0 +1,30 @@
+.challenges-wrapper
+
+  .challenges.container
+    section
+
+      header.challenges__header
+        h2.challenges__title.section-title Recent News
+        a.challenges__button-all.section-button-all(href='#' role='button') See All
+
+      -var challenges = [1, 2, 3, 4, 5, 6, 7, 8]
+      for item in challenges
+        .challenge
+          article
+
+            header.challenge__header
+              img.challenge__picture(src='images/challenges/challenge-img-' + item + '.jpg' alt='Challenge image #' + item)
+              h3.challenge__title The Rockefeller Foundation Storytelling Challenge
+              span.challenge__competitors
+                | competitors
+                b  167
+
+            p.challenge__text A challenge to spur Rockefeller Foundation non-profit grantees to share the impact they have had on individuals, communities and the world best...
+
+            footer.challenge__footer
+              .challenge__footer-status
+                span.challenge__footer-status-title status
+                span.challenge__footer-status-content Fund the Prize
+              .challenge__footer-goal
+                span.challenge__footer-goal-title goal
+                span.challenge__footer-goal-content $5,000

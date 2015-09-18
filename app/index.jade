@@ -4,4 +4,11 @@ extends layouts/default
 block content
   include ./includes/header
 
-  main(role='main')
+  main
+    include ./includes/slider
+    include ./includes/banners
+    include ./includes/community
+    include ./includes/challenges
+    include ./includes/news
+
+  include ./includes/footer

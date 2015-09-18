@@ -1,0 +1,18 @@
+.slider-wrapper
+
+    .slider__controls.container
+      .slider__controls-arrow.slider__controls-arrow--left
+      .slider__controls-arrow.slider__controls-arrow--right
+
+    -var slides = [{label: 'Create & Solve Innovation Challenges Such As:', title: 'The Featured Challenge', buttonText: 'Learn more'}]
+    each slide, index in slides
+      .slider__item
+        article
+          -var num = index + 1
+          img(src='images/slider/slider-img-' + num + '.jpg' alt='Slide image #' + num)
+
+          .slider__item-content
+            header
+              span.slider__item-label= slide.label
+              h2.slider__item-title= slide.title
+            a.slider__item-button= slide.buttonText
