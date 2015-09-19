@@ -1,8 +1,9 @@
 .header-wrapper
 
   .header.container
-    a.header__logo(href='#home' role='banner')
-      img.header__logo-img(src='images/logo.png' alt='Logo image' title='Home')
+    .header__logo
+      a(href='#home' role='banner')
+        img(src='images/logo.png' alt='Logo image' title='Home')
 
     //- navigation
     nav.header__menu
@@ -11,15 +12,17 @@
       for item in menu
         a.header__menu-link(href='#')= item
 
-    .header__search
-      .header__search-trigger
+    .header__actions
 
-      //- search-wrapper
-      .header__search-input-wrapper
-        form.header__search-input-box(action='#' method='get')
-          button.header__search-submit(type='submit')
-          input.header__search-input(type='search' placeholder='')
+      .header__search
+        .header__search-trigger
 
-    //- buttons
-    a.header__login-button(href='#' role='button') Sign in
-    a.header__register-button(href='#' role='button') Join Us
+        //- search-wrapper
+        .header__search-input-wrapper
+          form.header__search-input-box(action='#' method='get')
+            button.header__search-submit(type='submit')
+            input.header__search-input(type='search' placeholder='')
+
+      //- buttons
+      a.header__login-button(href='#' role='button') Sign in
+      a.header__register-button(href='#' role='button') Join Us
